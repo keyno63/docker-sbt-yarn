@@ -5,8 +5,8 @@ When if we develop Scala projects with JS (managed br yarn).
 
 ## Docker Hub
 This Docker images is published to Docker Hub.
-- [keyno63/sbt](https://hub.docker.com/repository/docker/keyno63/sbt)
-- [keyno63/sbt-yarn](https://hub.docker.com/repository/docker/keyno63/sbt-yarn)
+- [keyno63/sbt](https://hub.docker.com/r/keyno63/sbt)
+- [keyno63/sbt-yarn](https://hub.docker.com/r/keyno63/sbt-yarn)
 
 ##　Use Library Version
 
