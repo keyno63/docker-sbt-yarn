@@ -24,7 +24,7 @@ e.g. In the case of using image of sbt-yarn with jdk8:
 ```shell
 # clone repository
 git clone <this repository>
-cd docker docker-sbt-yarn
+cd docker-sbt-yarn
 
 # build docker image
 docker build jdk8/alpine/sbt-yarn -t sbt-yarn:1.5-jdk8-alpine
