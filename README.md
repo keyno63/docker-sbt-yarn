@@ -1,6 +1,6 @@
 # docker-sbt-yarn
 
-This is for using sbt and yarn commands in docker image.
+This is for using sbt and yarn commands in docker image.  
 When if we develop Scala projects with JS (managed by yarn).
 
 ## Docker Hub
