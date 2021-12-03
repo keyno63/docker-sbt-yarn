@@ -34,7 +34,7 @@ docker build jdk8/alpine/sbt-yarn -t sbt-yarn:1.5-jdk8-alpine
 docker run -it --rm -v ${PWD}:/work -w /work sbt-yarn:1.5-jdk8-alpine /bin/bash
 
 # to run with sbt (batch mode).
-docker run -it --rm -v ${PWD}:/work -w /work sbt-yarn:1.5-jdk8-alpine
+docker run -it --rm -v ${PWD}:/work -w /work --entrypoint "sbt" sbt-yarn:1.5-jdk8-alpine
 ```
 
 ## LICENSE
