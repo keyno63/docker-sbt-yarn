@@ -8,7 +8,7 @@ This Docker images is published to Docker Hub.
 - [keyno63/sbt](https://hub.docker.com/r/keyno63/sbt)
 - [keyno63/sbt-yarn](https://hub.docker.com/r/keyno63/sbt-yarn)
 
-##　Use Library Version
+## Using Library Version
 
 - sbt: 1.5 (1.5.5)
 - jdk: 8, 11, or 17
