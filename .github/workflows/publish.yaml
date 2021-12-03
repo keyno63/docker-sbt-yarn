@@ -13,7 +13,7 @@ env:
   REGISTRY: "keyno63"
 
 jobs:
-  some-job-1:
+  build-and-publish-docker:
     timeout-minutes: 10
     strategy:
       fail-fast: true
