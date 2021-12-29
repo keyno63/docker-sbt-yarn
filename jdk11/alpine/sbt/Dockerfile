@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:jre-11.0.13_8-alpine
 
-ARG SBT_VERSION=1.5.5
+ARG SBT_VERSION=1.5.8
 
 RUN set -x \
     # install sbt
