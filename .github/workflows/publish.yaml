@@ -13,7 +13,35 @@ env:
   REGISTRY: "keyno63"
 
 jobs:
-  build-and-publish-docker:
+  build-and-publish-sbt-docker:
+    timeout-minutes: 10
+    strategy:
+      fail-fast: true
+      matrix:
+        jdk-version: [ '8', '11', '17' ]
+        repository-name: [ 'sbt', 'sbt-yarn' ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: jdk${{ matrix.jdk-version }}/alpine/${{ matrix.repository-name }}/Dockerfile
+          build-args: |
+            SBT_VERSION=1.5.5
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ matrix.repository-name }}:${{ env.SBT_VERSION }}-jdk${{ matrix.jdk-version }}-alpine
+  build-and-publish-sbt-yarn-docker:
     timeout-minutes: 10
     strategy:
       fail-fast: true
