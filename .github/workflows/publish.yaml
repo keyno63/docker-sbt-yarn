@@ -38,6 +38,6 @@ jobs:
           context: .
           file: jdk${{ matrix.jdk-version }}/alpine/${{ matrix.repository-name }}/Dockerfile
           build-args: |
-            SBT_VERSION=1.5.5
+            SBT_VERSION=1.5.8
           push: true
           tags: ${{ env.REGISTRY }}/${{ matrix.repository-name }}:${{ env.SBT_VERSION }}-jdk${{ matrix.jdk-version }}-alpine
