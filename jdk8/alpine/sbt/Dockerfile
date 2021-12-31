@@ -8,7 +8,7 @@ RUN set -x \
     && SBT_VER=${SBT_VERSION} \
     # piccolo is dead https://github.com/sbt/sbt/issues/5860
     && SBT_URL="https://github.com/sbt/sbt/releases/download/v${SBT_VER}/sbt-${SBT_VER}.zip" \
-    && apk add shadow bash openssh rsync git \
+    && apk add bash \
     && curl -Ls ${SBT_URL} > /tmp/sbt-${SBT_VER}.zip \
     && mkdir /opt/sbt \
     && unzip /tmp/sbt-${SBT_VER}.zip -d /opt/sbt \

@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-alpine
 
-ARG SBT_VERSION=1.5.8
+ARG SBT_VERSION=1.6.1
 
 RUN set -x \
     # install sbt
